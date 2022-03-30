@@ -1,0 +1,28 @@
+<%- include('../partials/header'); %>
+
+
+<h3><%= postTitle %></h3>
+
+
+
+</p>
+    <i>Created: <%= createdTime %></i>
+    <br />
+
+  <i>Last Modified: <%= lastModified%></i>
+
+    <% data.forEach(function(line) { %>
+
+  <p><%= line %></p>
+
+  <% }); %>
+
+  
+<%- include('../partials/footer'); %>
+
+<p>Tags: 
+  <% tags.forEach(function(tag) { %>
+
+    <a href=<%= "/tags/" + tag.trim().replace(' ','@') %>><%= tag.trim() %></a>
+
+    <% }); %>

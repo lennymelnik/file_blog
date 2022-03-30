@@ -1,0 +1,26 @@
+<%- include('../partials/header'); %>
+bruh
+
+<h3>Tags</h3>
+
+<% Object.keys(tags).forEach(function(tag) { %>
+
+  <li>
+      <a href=<%= "/tags/" + tag.replace(' ','@') %>><%= tag %></a>
+  
+  </li>
+<% }); %>
+
+<h3>Topics</h3>
+
+<ul>
+    <% folders.forEach(function(folder) { %>
+
+      <li>
+          <a href=<%= "/folder/"+folder %>><%= folder %></a>
+      
+      </li>
+    <% }); %>
+  </ul>
+
+<%- include('../partials/footer'); %>

@@ -1,0 +1,16 @@
+<%- include('../partials/header'); %>
+
+
+<h3><%= thisTag %></h3>
+
+
+<% posts.forEach(function(post) { %>
+
+  <li>
+      <a href=<%= '/folder/'+post %>><%= post %></a>
+  
+  </li>
+<% }); %>
+
+
+<%- include('../partials/footer'); %>

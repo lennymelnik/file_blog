@@ -1,0 +1,14 @@
+<%- include('../partials/header'); %>
+bruh
+<ul>
+    <% posts.forEach(function(post) { %>
+
+        <h3>Posts</h3>
+      <li>
+          <a href=<%= "/folder/"+folder+"/"+post %>><%= post.replace('.txt','') %></a>
+      
+      </li>
+    <% }); %>
+  </ul>
+
+<%- include('../partials/footer'); %>
